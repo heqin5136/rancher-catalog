@@ -1,0 +1,28 @@
+.catalog:
+    name: "Gitlab"
+    version: "v0.1"
+    description: "Gitlab from heqinqin build"
+    questions:
+     - variable: "SMTP_DOMAIN"
+       description: "Name of the GlusterFS Volume"
+       label: "GlusterFS Volume"
+       required: true
+       type: "string"
+       default: 163.com
+     - variable: "SMTP_USER"
+       description: "Name of the GlusterFS Volume"
+       label: "GlusterFS Volume"
+       required: true
+       type: "string"
+       default: example.163.com
+     - variable: "SMTP_PASS"
+       description: "Name of the GlusterFS Volume"
+       label: "GlusterFS Volume"
+       required: true
+       type: "string"
+gitlab:
+  scale: 1
+gitlab-mysql:
+  scale: 1
+gitlab-redis:
+  scale: 1

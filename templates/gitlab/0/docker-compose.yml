@@ -1,0 +1,45 @@
+gitlab:
+  ports:
+  - 80:80/tcp
+  - 1022:22/tcp
+  environment:
+    GITLAB_PORT: '80'
+    GITLAB_SECRETS_DB_KEY_BASE: KTQjWFcvkgMTkvV2B6nQLCS4tfhBKnHclj74VT9hDHfMLR8Dx9228gdZTX4bPzZM
+    GITLAB_SSH_PORT: '22'
+    GITLAB_HOST: gitlab
+    SMTP_ENABLED: 'true'
+    SMTP_DOMAIN: 163.com
+    SMTP_USER: cntvgitlab@163.com
+    SMTP_PASS: 
+    SMTP_HOST: smtp.163.com
+    SMTP_PORT: '25'
+    SMTP_STARTTLS: 'false'
+  labels:
+    io.rancher.container.hostname_override: container_name
+  tty: true
+  image: registry.cntv.net/sameersbn/gitlab:8.2.3
+  links:
+  - gitlab-mysql:mysql
+  - gitlab-redis:redisio
+  volumes:
+  - /var/run/docker.sock:/run/docker.sock
+  - /usr/bin/docker:/bin/docker
+  - /opt/gitlab/data:/home/git/data
+  - /opt/gitlab/log:/var/log/gitlab
+  stdin_open: true
+gitlab-mysql:
+  environment:
+    DB_NAME: gitlabhq_production
+    DB_USER: gitlab
+    DB_PASS: password
+  labels:
+    io.rancher.container.hostname_override: container_name
+  tty: true
+  image: registry.cntv.net/sameersbn/mysql:latest
+  volumes:
+  - /opt/gitlab/mysql:/var/lib/mysql
+  stdin_open: true
+gitlab-redis:
+  tty: true
+  image: registry.cntv.net/sameersbn/redis:latest
+  stdin_open: true
