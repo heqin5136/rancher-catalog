@@ -4,31 +4,31 @@
     description: "Gitlab from heqinqin build"
     questions:
      - variable: "SMTP_DOMAIN"
-       description: "Name of the GlusterFS Volume"
+       description: "Name of the SMTP_DOMAIN"
        label: "SMTP_DOMAIN"
        required: true
-       type: ""
+       type: "string"
        default: 163.com
      - variable: "SMTP_USER"
-       description: "Name of the GlusterFS Volume"
+       description: "Name of the SMTP_USER"
        label: "SMTP_USER"
        required: true
        type: "string"
        default: zhangsan.163.com
      - variable: "SMTP_PASS"
-       description: "Name of the GlusterFS Volume"
+       description: "Name of the SMTP_PASS"
        label: "SMTP_PASS"
        required: true
        type: "string"
      - variable: "SMTP_HOST"
-       description: "Name of the GlusterFS Volume"
+       description: "Name of the SMTP_HOST"
        label: "SMTP_HOST"
        required: true
        type: "string"
        default: smtp.163.com
      - variable: "SMTP_PORT"
-       description: "Name of the GlusterFS Volume"
-       label: "SMTP_USER"
+       description: "Name of the SMTP_PORT"
+       label: "SMTP_PORT"
        required: true
        type: "string"
        default: 25
