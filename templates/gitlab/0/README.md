@@ -1,18 +1,18 @@
-# MongoDB
+# Gitlab
 
 
 ### Info:
 
- This template creates MongoDB replica set on top of Rancher. Replica set size starts with 3 MongoDB instances, the replica set has the ability to scale up automatically when adding new instances. 
+ This template creates Gitlab replica set on top of Rancher. 
  
+ MAINTAINER heqinqin
  
 ### Usage:
 
- Select MongoDB from catalog. 
+ Select Gitlab from catalog. 
  
- Enter the name of the replica set.
+ Enter the name and Email infomation  of the replica set.
  
- Click deploy.
  
- MongoDB can now be accessed over the Rancher network. 
+ Gitlab  use mysql and redis , can now be accessed over the Rancher network. 
  

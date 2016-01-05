@@ -5,19 +5,19 @@
     questions:
      - variable: "SMTP_DOMAIN"
        description: "Name of the GlusterFS Volume"
-       label: "GlusterFS Volume"
+       label: "SMTP_DOMAIN"
        required: true
        type: "string"
        default: 163.com
      - variable: "SMTP_USER"
        description: "Name of the GlusterFS Volume"
-       label: "GlusterFS Volume"
+       label: "SMTP_USER"
        required: true
        type: "string"
        default: example.163.com
      - variable: "SMTP_PASS"
        description: "Name of the GlusterFS Volume"
-       label: "GlusterFS Volume"
+       label: "SMTP_PASS"
        required: true
        type: "string"
 gitlab:
