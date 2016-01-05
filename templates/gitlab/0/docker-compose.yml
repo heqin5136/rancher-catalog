@@ -8,11 +8,11 @@ gitlab:
     GITLAB_SSH_PORT: '22'
     GITLAB_HOST: gitlab
     SMTP_ENABLED: 'true'
-    SMTP_DOMAIN: 163.com
-    SMTP_USER: cntvgitlab@163.com
+    SMTP_DOMAIN: 
+    SMTP_USER: 
     SMTP_PASS: 
-    SMTP_HOST: smtp.163.com
-    SMTP_PORT: '25'
+    SMTP_HOST: 
+    SMTP_PORT:
     SMTP_STARTTLS: 'false'
   labels:
     io.rancher.container.hostname_override: container_name

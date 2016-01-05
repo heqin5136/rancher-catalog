@@ -7,19 +7,31 @@
        description: "Name of the GlusterFS Volume"
        label: "SMTP_DOMAIN"
        required: true
-       type: "string"
+       type: ""
        default: 163.com
      - variable: "SMTP_USER"
        description: "Name of the GlusterFS Volume"
        label: "SMTP_USER"
        required: true
        type: "string"
-       default: example.163.com
+       default: zhangsan.163.com
      - variable: "SMTP_PASS"
        description: "Name of the GlusterFS Volume"
        label: "SMTP_PASS"
        required: true
        type: "string"
+     - variable: "SMTP_HOST"
+       description: "Name of the GlusterFS Volume"
+       label: "SMTP_HOST"
+       required: true
+       type: "string"
+       default: smtp.163.com
+     - variable: "SMTP_PORT"
+       description: "Name of the GlusterFS Volume"
+       label: "SMTP_USER"
+       required: true
+       type: "string"
+       default: 25
 gitlab:
   scale: 1
 gitlab-mysql:
