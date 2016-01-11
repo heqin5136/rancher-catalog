@@ -32,6 +32,12 @@
        required: true
        type: "string"
        default: 25
+     - variable: "HOST_LABEL"
+       label: "Host label"
+       description: "Specify a Rancher host label here that will be used it."
+       type: "string"
+       default: name=git
+       required: true
 gitlab:
   scale: 1
 gitlab-mysql:
