@@ -4,7 +4,7 @@
     description: "Convoy GlusterFS - Docker volume plugin"
     uuid: "logspout-0"
     questions:
-     - variable: "Syslog"
+     - variable: "SYSLOG"
        description: "Command of syslog address"
        label: "syslog"
        required: true

@@ -3,7 +3,7 @@ logspout:
     io.rancher.scheduler.global: 'true'
     io.rancher.container.pull_image: always
   command:
-  - syslog://${syslog}
+  - syslog://${SYSLOG}
   image: registry.cntv.net/logspout:v2
   volumes:
   - /var/run/docker.sock:/tmp/docker.sock
