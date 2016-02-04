@@ -9,4 +9,6 @@ cadvisor:
     - /var/run:/var/run:rw
     - /sys:/sys:ro
     - /var/lib/docker/:/var/lib/docker:ro
-    - /etc/hostname:/etc/hostname 
+    - /etc/hostname:/etc/hostname
+  labels:
+    io.rancher.scheduler.global: 'true' 
