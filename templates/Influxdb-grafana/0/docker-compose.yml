@@ -26,3 +26,5 @@ grafana:
     - INFLUXDB_NAME=cadvisor
     - INFLUXDB_USER=root
     - INFLUXDB_PASS=root
+  labels:
+    io.rancher.scheduler.affinity:host_label: ${HOST_LABEL}
