@@ -2,14 +2,11 @@ cadvisor:
   image: registry.cntv.net/cadvisor
   name: cadvisor
   command: -storage_driver=influxdb -storage_driver_db=cadvisor -storage_driver_host=${INFLUXDB}:8086
-  ports:
-    - "8880:8080"
   volumes:
     - /:/rootfs:ro
     - /var/run:/var/run:rw
     - /sys:/sys:ro
     - /var/lib/docker/:/var/lib/docker:ro
-    - /etc/hostname:/etc/hostname
-    - /usr/bin/hostname:/bin/hostname
+  net: host
   labels:
     io.rancher.scheduler.global: 'true' 
