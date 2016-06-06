@@ -8,4 +8,4 @@
        label: "influxdb"
        required: true
        type: "string"
-       default: 10.72.7.187
+       default: 10.71.32.101
