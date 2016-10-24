@@ -1,17 +1,18 @@
 kong-database:
-  image: registry.cntv.net/cassandra:2.2
-  ports: 9042:9042/tcp
+  images:registry.cntv.net/cassandra:2.2
+  ports: 
+  - 9042:9042/tcp
   labels:
     io.rancher.container.hostname_override: container_name
     io.rancher.container.pull_image: always
 kong:
   image: registry.cntv.net/kong
   links: 
-    kong-database:kong-database
+  -  kong-database:kong-database
   environment:
-    KONG_DATABASE=cassandra
-    KONG_CASSANDRA_CONTACT_POINTS=kong-database
-    KONG_PG_HOST=kong-database
+  - KONG_DATABASE=postgres
+  - KONG_CASSANDRA_CONTACT_POINTS=kong-database
+  - KONG_PG_HOST=kong-database
   ports:
   - 8000:8000/tcp
   - 8443:8443/tcp

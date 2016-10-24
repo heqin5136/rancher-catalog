@@ -1,20 +1,21 @@
 kong-database:
   image: postgres:9.4
-  ports: 5432:5432/tcp
+  ports: 
+  - 5432:5432/tcp
   environment:
-    POSTGRES_USER=kong 
-    POSTGRES_DB=kong
+  - POSTGRES_USER=kong 
+  - POSTGRES_DB=kong
   labels:
     io.rancher.container.hostname_override: container_name
     io.rancher.container.pull_image: always
 kong:
-  image: kong
+  image: registry.cntv.net/kong
   links: 
-    kong-database:kong-database
+  -  kong-database:kong-database
   environment:
-    KONG_DATABASE=postgres
-    KONG_CASSANDRA_CONTACT_POINTS=kong-database
-    KONG_PG_HOST=kong-database
+  - KONG_DATABASE=postgres
+  - KONG_CASSANDRA_CONTACT_POINTS=kong-database
+  - KONG_PG_HOST=kong-database
   ports:
   - 8000:8000/tcp
   - 8443:8443/tcp
