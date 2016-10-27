@@ -26,4 +26,5 @@ kong:
   - 7373:7373/tcp
   labels:
     io.rancher.container.hostname_override: container_name
+    io.rancher.container.requested_ip: ${RANCHER_IP}
     io.rancher.container.start_once: true
