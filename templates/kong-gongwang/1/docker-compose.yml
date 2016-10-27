@@ -1,5 +1,5 @@
 kong-database:
-  images:cassandra:2.2
+  image: cassandra:2.2
   ports: 
   - 9042:9042/tcp
   labels:
