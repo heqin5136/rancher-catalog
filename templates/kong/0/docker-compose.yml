@@ -9,10 +9,11 @@ kong-database:
     io.rancher.container.hostname_override: container_name
     io.rancher.container.pull_image: always
 kong:
-  image: registry.cntv.net/kong
+  image: registry.cntv.net/kong:v0.1
   links: 
   -  kong-database:kong-database
   environment:
+  - RANCHER_IP=${RANCHER_IP}
   - KONG_DATABASE=postgres
   - KONG_CASSANDRA_CONTACT_POINTS=kong-database
   - KONG_PG_HOST=kong-database
