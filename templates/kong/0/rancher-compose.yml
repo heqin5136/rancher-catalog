@@ -1,6 +1,23 @@
 .catalog:
   name: "Kong"
-  version: "v1-postgres:9.4"
+  version: "v2-cluster-postgres:9.4"
   description: "kong use postgres"
-  kong:
-   scale: 1
+  questions:
+     - variable: "RANCHER_IP1"
+       description: "rancher_ip in 10.42.0.0/16"
+       label: "RANCHER_IP1"
+       required: flase
+       type: "string"
+       default: "ipv4"
+     - variable: "RANCHER_IP2"
+       description: "rancher_ip in 10.42.0.0/16"
+       label: "RANCHER_IP2"
+       required: flase
+       type: "string"
+       default: "ipv4"
+     - variable: "RANCHER_IP3"
+       description: "rancher_ip in 10.42.0.0/16"
+       label: "RANCHER_IP3"
+       required: flase
+       type: "string"
+       default: "ipv4"

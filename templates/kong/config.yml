@@ -1,5 +1,5 @@
 name: Kong
 description: |
   Micrservice API Gateway . kong
-version: v1-postgres:9.4
+version: v2-cluster-postgres:9.4
 category: Kong
