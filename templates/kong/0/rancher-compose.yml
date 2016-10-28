@@ -2,12 +2,5 @@
   name: "Kong"
   version: "v1-postgres:9.4"
   description: "kong use postgres"
-  questions:
-     - variable: "RANCHER_IP"
-       description: "rancher_ip in 10.42.0.0/16"
-       label: "RANCHER_IP"
-       required: flase
-       type: "string"
-       default: 10.42.
   kong:
    scale: 1
