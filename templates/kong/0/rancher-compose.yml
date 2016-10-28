@@ -2,15 +2,15 @@
   name: "Kong"
   version: "v1-postgres:9.4"
   description: "kong use postgres"
- questions:
+  questions:
     - variable: "REPLICAS"
       description: "Number of Kong"
       label: "Number of Nodes:"
       required: true
       default: 3
       type: "int"
- kong:
-  retain_ip: true
-  scale: ${REPLICAS}  
- kong-database:
-  scale: 1
+  kong:
+   retain_ip: true
+   scale: ${REPLICAS}  
+  kong-database:
+   scale: 1
