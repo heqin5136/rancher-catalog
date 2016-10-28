@@ -1,16 +1,17 @@
 .catalog:
   name: "Kong"
-  version: "v1-postgres:9.4"
-  description: "kong use postgres"
- questions:
+  version: "v1-cassandra:2.2"
+  description: "kong use cassandra"
+  uuid: kong-0
+  questions:
     - variable: "REPLICAS"
       description: "Number of Kong"
       label: "Number of Nodes:"
       required: true
       default: 3
       type: "int"
- kong:
-  retain_ip: true
-  scale: ${REPLICAS}  
- kong-database:
-  scale: 1
+  kong:
+   retain_ip: true
+   scale: ${REPLICAS}  
+  kong-database:
+   scale: 1
