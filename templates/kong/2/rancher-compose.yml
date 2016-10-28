@@ -9,7 +9,7 @@
        required: flase
        type: "string"
        default: 10.42.100.1
-     - variable: "RANCHER_IP1"
+     - variable: "RANCHER_IP2"
        description: "rancher_ip in 10.42.0.0/16"
        label: "RANCHER_IP2"
        required: flase
