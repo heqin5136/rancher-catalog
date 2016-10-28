@@ -8,16 +8,16 @@
        label: "RANCHER_IP1"
        required: flase
        type: "string"
-       default: 10.42.100.1
+       default: "ipv4"
      - variable: "RANCHER_IP2"
        description: "rancher_ip in 10.42.0.0/16"
        label: "RANCHER_IP2"
        required: flase
        type: "string"
-       default: 10.42.100.2
+       default: "ipv4"
      - variable: "RANCHER_IP3"
        description: "rancher_ip in 10.42.0.0/16"
        label: "RANCHER_IP3"
        required: flase
        type: "string"
-       default: 10.42.100.3
+       default: "ipv4"
